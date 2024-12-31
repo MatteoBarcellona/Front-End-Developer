@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .bolla {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            animation: animazione-bolla 10s infinite;
+        }
+
+        @keyframes animazione-bolla {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-400px) scale(2);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Aggiungi bolle al corpo della pagina tramite JavaScript -->
+    <script>
+        // Crea le bolle
+        var numeroBolle = 50;
+        var corpoPagina = document.querySelector("body");
+        for (var i = 0; i < numeroBolle; i++) {
+            var bolla = document.createElement("div");
+            bolla.className = "bolla";
+            var dimensione = Math.random() * 60 + 10;  // Dimensioni casuali tra 10px e 70px
+            bolla.style.width = dimensione + "px";
+            bolla.style.height = dimensione + "px";
+            bolla.style.left = Math.random() * 400 + "vw";  // Posizione orizzontale casuale
+            corpoPagina.appendChild(bolla);
+        }
+    </script>
+</body>
+</html>

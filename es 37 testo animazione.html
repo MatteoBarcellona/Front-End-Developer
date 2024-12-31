@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes sfondo-animato {
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+
+        @keyframes testo-animato {
+            0% {
+                color: white;
+            }
+            50% {
+                color: black;
+            }
+            100% {
+                color: white;
+            }
+        }
+
+        body {
+            animation: sfondo-animato 5s infinite, testo-animato 5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testo e Sfondo Animati</h1>
+</body>
+</html>
+

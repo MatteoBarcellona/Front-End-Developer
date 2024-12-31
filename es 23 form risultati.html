@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<form id="formRicerca">
+    <label for="query">Cerca:</label>
+    <input type="text" id="query" name="query">
+    <input type="submit" value="Cerca">
+</form>
+
+<div id="risultatiRicerca"></div>
+
+<script>
+    document.getElementById("formRicerca").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var query = document.getElementById("query").value;
+        // Esegui una ricerca con la query e mostra i risultati
+        var risultati = "Risultati della ricerca per: " + query;
+        document.getElementById("risultatiRicerca").innerHTML = risultati;
+    });
+</script>
+
+    
+    
+    
+</body>
+</html>

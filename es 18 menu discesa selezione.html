@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Chi Siamo</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Servizi</a>
+                <div class="dropdown-content">
+                    <a href="#service1">Servizio 1</a>
+                    <a href="#service2">Servizio 2</a>
+                    <a href="#service3">Servizio 3</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contatti</a></li>
+        </ul>
+    </nav>
+    
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+    
+    
+    
+</body>
+</html>

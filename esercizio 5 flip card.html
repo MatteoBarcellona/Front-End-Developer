@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.button1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: 9px solid gold;
+  border-radius: 8px;
+  padding: 0px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(189deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: yellow;
+}
+
+
+.flip-card-back {
+  background-color: #ffff00;
+  color: black;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+<h1>La mia flip card</h1>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="mb.jpg" alt="mb" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1 style="color:Gold;">Matteo Barcellona</h1> 
+      <p>ETÀ:17 anni</p> 
+     <p>vivo a nichelino</p>
+     <p>classe 3BINFO</p>
+     <p>faccio informatica</p> <form action="https://it.wikipedia.org/wiki/Informatica">
+  <button type="submit">
+    informatica
+  </button>  
+</form>
+<form action="C:\Users\antonino\Desktop\documenti di informatica\sito html\sito.html">
+  <button type="submit">
+    il mio sito
+  </button>  
+</form>
+
+
+    
+    </div>
+  </div>
+</div>
+</body>
+</html>

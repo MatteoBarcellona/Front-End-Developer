@@ -1,0 +1,55 @@
+<html>
+<body>
+<style>
+button{
+height:50px;
+width:50px;
+background-color:chartreuse;
+border:solid black 3px;
+}
+.red{
+background-color:red;    
+}
+.blue{
+background-color:blue;
+}
+.oro{
+background-color:gold;
+}
+.t{
+background-color:pink;
+}
+</style>
+<p id="demo">
+</p>
+<p id="out">0</p>
+<p id="22">0</p>
+<p id="o1">0</p>
+<p id="o2">0</p>
+<button class="red" type="button" onclick="count()">clicca</button>
+<button class="blue" type="button" onclick="count2()">clicca</button>
+<button class="oro" type="button" onclick="count3()">clicca</button>
+<button type="button" onclick="count4()">clicca</button>
+<script>
+let i = 0;
+let start = Date.now();
+const d = new Date();
+let minutes = d.getUTCMinutes();
+let hour = d.getUTCHours();
+function count() {
+document.getElementById("out").innerHTML ="tempo in " + (Date.now() - start) + " ms";
+}
+function count2() {
+let seconds = d.getUTCSeconds();
+document.getElementById("22").innerHTML = seconds +" tempo in secondi";
+}
+function count3() {
+document.getElementById("o1").innerHTML = minutes + " minuti ";
+}
+function count4() {
+document.getElementById("o2").innerHTML = hour+"ora";
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .menu {
+            display: none;
+        }
+
+        .hamburger {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function mostraMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="hamburger" onclick="mostraMenu()">☰ Menu</div>
+    <div class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">Chi Siamo</a>
+        <a href="#services">Servizi</a>
+        <a href="#contact">Contatti</a>
+    </div>
+</body>
+</html>

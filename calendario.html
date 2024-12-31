@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .current-day {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .current-month {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .current-year {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calendario</h1>
+    <table id="calendar"></table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date();
+            var currentMonth = today.getMonth();
+            var currentYear = today.getFullYear();
+            var calendar = document.getElementById('calendar');
+
+            function generateCalendar(month, year) {
+                var firstDay = new Date(year, month, 1).getDay();
+                var daysInMonth = new Date(year, month + 1, 0).getDate();
+                var date = 1;
+                var table = '<tr>';
+
+                // Add empty cells for the days before the first day of the month
+                for (var i = 0; i < firstDay; i++) {
+                    table += '<td></td>';
+                }
+
+                // Add cells for each day of the month
+                while (date <= daysInMonth) {
+                    if (new Date(year, month, date).toDateString() === today.toDateString()) {
+                        table += '<td class="current-day">' + date + '</td>';
+                    } else {
+                        table += '<td>' + date + '</td>';
+                    }
+
+                    if (new Date(year, month, date).getDay() === 6) {
+                        table += '</tr><tr>';
+                    }
+
+                    date++;
+                }
+
+                // Add empty cells for the remaining days in the last week
+                for (var i = new Date(year, month, daysInMonth).getDay(); i < 6; i++) {
+                    table += '<td></td>';
+                }
+
+                table += '</tr>';
+                calendar.innerHTML = table;
+            }
+
+            generateCalendar(currentMonth, currentYear);
+        });
+    </script>
+</body>
+
+</html>
+
